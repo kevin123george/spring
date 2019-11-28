@@ -2,6 +2,7 @@ package com.example.Hatake.dao;
 
 import com.example.Hatake.model.Person;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -11,5 +12,6 @@ public interface PersonDao {
         UUID id = UUID.randomUUID();
         return insterPerson(id,person);
     }
+    List<Person> selectAllPerson();
 
 }
