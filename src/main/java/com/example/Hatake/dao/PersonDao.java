@@ -3,6 +3,7 @@ package com.example.Hatake.dao;
 import com.example.Hatake.model.Person;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -13,5 +14,10 @@ public interface PersonDao {
         return insterPerson(id,person);
     }
     List<Person> selectAllPerson();
+
+    Optional<Person> selectPersonById(UUID id);
+    int deletePersonById(UUID id);
+
+    int updatPersonById(UUID id,Person person);
 
 }
